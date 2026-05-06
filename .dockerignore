@@ -1,0 +1,90 @@
+# VCS
+.git
+.gitignore
+.gitattributes
+
+# Python caches / build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.pyd
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.conda/
+.micromamba/
+
+# IDE / editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System / OS
+.DS_Store
+Thumbs.db
+
+# Large/generated outputs you don't want in the image
+results/
+inference/
+repositories/
+retrieval_results_*
+tmp/
+cache/
+artifacts/
+outputs/
+runs/
+logs/
+
+# Dataset files / heavy raw data
+data/
+dataset_related_scripts_and_data/
+
+# Notebooks and interactive outputs
+*.ipynb
+*.ipynb_checkpoints
+
+# Binary archives, caches
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+
+# Credentials / local secrets
+*.env
+.env.*
+**/secrets.*
+**/*token*
+**/*apikey*
+
+# Docker / logs
+**/*.log
+
+# Keep these paths - DO NOT ignore them
+!docker/**
+!probench/**
+!pyproject.toml
+!requirements.txt
+!config/**
+!README.md
+!LICENSE
