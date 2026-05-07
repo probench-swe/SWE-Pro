@@ -88,7 +88,7 @@ Create a `.env` file in the project root. You only need to add keys for the prov
 OPENAI_API_KEY=your_key_here        # openai_chat, openai_responses
 ANTHROPIC_API_KEY=your_key_here     # anthropic
 GEMINI_API_KEY=your_key_here        # gemini
-NVIDIA_API_KEY=your_key_here        # nvidia_nim, qwen_nim, minimax
+NVIDIA_API_KEY=your_key_here        # nvidia_nim
 ZHIPU_API_KEY=your_key_here         # zhipu
 OLLAMA_API_KEY=your_key_here        # ollama (local instance)
 
@@ -115,7 +115,6 @@ Only add the API key for the provider you are using. Ollama runs locally and doe
 | `anthropic` | `ANTHROPIC_API_KEY` | Claude models |
 | `gemini` | `GEMINI_API_KEY` | Google Gemini models |
 | `nvidia_nim` | `NVIDIA_API_KEY` | NVIDIA NIM inference |
-| `minimax` | `NVIDIA_API_KEY` | MiniMax via NVIDIA NIM |
 | `zhipu` | `ZHIPU_API_KEY` | Zhipu AI models |
 | `hf` | `HUGGINGFACE_API_KEY` | Hugging Face inference API |
 
