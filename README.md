@@ -2,7 +2,7 @@
 
 > An evaluation harness for software engineering agents — run, benchmark, and compare LLM-powered coding agents against parametrized performance test in isolated Docker containers.
 > The dataset used in this study is available online at:
-[SWE-Pro Dataset](https://github.com/probench-swe/SWE-Pro)
+[SWE-Pro Dataset]([https://github.com/probench-swe/SWE-Pro](https://huggingface.co/datasets/probench-swe/SWE-Pro))
 ---
 
 ## Table of Contents
