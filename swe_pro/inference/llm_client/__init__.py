@@ -30,17 +30,6 @@ def get_llm_client(provider: str, **kwargs):
             thinking=kwargs.get("thinking", False),
         )
 
-    if provider == "qwen_nim":
-        from swe_pro.inference.llm_client.qwen_nim_client import QwenNIMClient
-        return QwenNIMClient(
-            api_key=_load_key_from_env("nvidia_nim"),
-            model=kwargs["model"],
-            temperature=kwargs.get("temperature"),
-            top_p=kwargs.get("top_p"),
-            max_tokens=kwargs.get("max_tokens"),
-            thinking=kwargs.get("thinking", False),
-        )
-
     if provider == "minimax":
         from swe_pro.inference.llm_client.nvidia_nim_openai_client import NvidiaNIMOpenAIClient
         return NvidiaNIMOpenAIClient(
