@@ -1,5 +1,5 @@
 import requests
-from swe_pro.inference.llm_client.base import BaseLLMClient
+from probench.inference.llm_client.base import BaseLLMClient
 
 
 class NvidiaNIMClient(BaseLLMClient):
