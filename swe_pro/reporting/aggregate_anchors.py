@@ -380,7 +380,7 @@ def format_anchor_report(summary: Dict[str, Any]) -> str:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--anchors_dir",  type=Path, default="results_experiments_valid/anchors")
+    parser.add_argument("--anchors_dir",  type=Path, required=True, help="Path to anchors directory containing scenario subdirectories with reports.")
     parser.add_argument("--output_path",  type=Path, default="anchor_summary/anchor_summary.json")
     parser.add_argument("--print_report", action="store_true", default=True)
 

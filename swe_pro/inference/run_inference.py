@@ -45,7 +45,7 @@ def main() -> None:
     p = ArgumentParser(
         prog="SWE-Pro inference runner")
 
-    # ── Input / Output ────────────────────────────────────────────────────────
+    # Input / Output 
     p.add_argument(
         "--dataset_path",
         type=Path,
@@ -60,7 +60,7 @@ def main() -> None:
         help="Root output folder for inference runs.",
     )
 
-    # ── Run Naming ────────────────────────────────────────────────────────────
+    # Run Naming 
     p.add_argument(
         "--run_id",
         default=None,
@@ -72,7 +72,7 @@ def main() -> None:
         help="Optional label appended to computed run_id (e.g. attempt1).",
     )
 
-    # ── Model ─────────────────────────────────────────────────────────────────
+    # Model 
     p.add_argument(
         "--provider",
         required=True,
@@ -90,13 +90,13 @@ def main() -> None:
         help="Custom API endpoint URL.",
     )
 
-    # ── Generation ────────────────────────────────────────────────────────────
+    # Generation
     p.add_argument("--temperature", type=float, default=None)
     p.add_argument("--top_p",       type=float, default=None)
     p.add_argument("--max_tokens",  type=int,   default=None)
     p.add_argument("--api_version", type=str,   default="v1beta")
 
-    # ── Control ───────────────────────────────────────────────────────────────
+    # Control
     p.add_argument("--retries",       type=int,   default=10)
     p.add_argument("--sleep_s",       type=float, default=0)
     p.add_argument("--max_instances", type=int,   default=None)

@@ -7,8 +7,8 @@ This runner expects inference outputs under:
 
     <inference_root>/<scenario_id>/
         completion.txt
-        meta.json (optional)
-        DONE (optional)
+        meta.json
+        DONE 
 
 Core behavior
 -------------
@@ -24,14 +24,14 @@ For each dataset row:
    - llm: reuses baseline image, mounts inference dir as /llm_inference
           and patching happens inside the container entrypoint.
 
-3) Evaluates via ReportAnalyzer:
+3) Evaluates:
    - correctness comparison (baseline vs llm)
-   - benchmark comparison (baseline vs llm), optionally correctness-gated
+   - benchmark comparison (baseline vs llm)
    - optional baseline vs reference evaluation
 
 4) Exports:
-   - comparisons/<experiment_id>/report.json + csv/xlsx
-   - SUMMARY__<experiment_id>.json per scenario
+   - comparisons/<experiment_id>/report.json
+   - SUMMARY__<experiment_id>.json per pr
 """
 
 from __future__ import annotations
@@ -130,8 +130,7 @@ def main() -> None:
     parser.add_argument(
         "--inference_run_dir",
         type=Path,
-        #required=True,
-        default="inference/example_inference_gpt5.2_bm25/oracle__gemini-3.1-flash-lite-preview__tNone__topNone__pd_1dcd1366f5d4",
+        required=True,
         help="Path to one inference run folder: inference/<run_id>/"
     )
     

@@ -425,7 +425,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--experiment_dir",
         type=Path,
-        default="results_experiments_valid/evals/oracle_full_file__claude-sonnet-4-6@default__tNone__topNone__pd_128b608333b1",
+        required=True,
+        help="Path to experiment directory containing scenario subdirectories with reports."
     )
     parser.add_argument("--output_path",  type=Path, default=None)
     parser.add_argument("--print_report", action="store_true", default=True)
